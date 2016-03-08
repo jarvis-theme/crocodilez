@@ -19,7 +19,7 @@
 									<p>{{@$kontak->alamat}}</p>
 									<p>
 										@if(!empty($kontak->telepon))
-										<div class="phone">
+										<div class="phone" title="Telepon">
 											<i class="fa fa-phone"></i>
 										</div>
 										<div class="inline">
@@ -28,7 +28,7 @@
 										<br>
 										@endif
 										@if(!empty($kontak->hp))
-										<div class="hp">
+										<div class="hp" title="SMS">
 											<i class="fa fa-mobile fa-lg"></i>
 										</div>
 										<div class="inline">
@@ -36,13 +36,28 @@
 										</div>
 										<br>
 										@endif
-										<div class="mail">
+										@if(!empty($kontak->bb))
+										<div class="mail" title="BBM">
+											<i class="fa fa-comment fa-1x"></i>
+										</div>
+										<div class="inline">
+											{{$kontak->bb}}
+										</div>
+										<br>
+										@endif
+										<div class="mail" title="Email">
 											<i class="fa fa-envelope-o"></i>
 										</div>
 										<div class="inline">
 											{{$kontak->email}}
 										</div>
+										<br>
+										@if(!empty($kontak->ym))
+										{{ymyahoo($kontak->ym)}}
+										<br>
+										@endif
 									</p>
+									<div class="clearfix"></div>
 								</div>
 								<ul class="confirm">
 									<li>

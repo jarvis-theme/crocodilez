@@ -217,7 +217,7 @@ header ul li a { color: #fff }header ul li a:hover { opacity: 0.8 }
 .dropdown-toggle { padding: 0px }
 #adv-bottom { margin-top: 60px }
 .myaccount, .foot-title { padding-bottom: 15px; display: inline-block }
-.confirm { list-style: none; padding-left: 10px; margin: 10px 0 0 -10px }
+.confirm { padding-left: 0; margin: 10px 0 0 15px }
 .confirm a { color: #fff }
 .page { margin: 40px 0 80px }
 .detailorder { padding-left: 15px }
