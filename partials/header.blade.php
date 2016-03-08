@@ -4,9 +4,11 @@
 			<span class="white">
 				<i class="fa fa-envelope-o"></i><small> <a class="white" href="mailto:{{$kontak->email}}">{{$kontak->email}}</a></small>
 			</span>
+			@if(!empty($kontak->hp))
 			<span class="hp-top">
 				<i class="fa fa-mobile fa-lg"></i><small> {{$kontak->hp}}</small>
 			</span>
+			@endif
 		</div>
 		<div class="member-top">
 			<span class="white">
