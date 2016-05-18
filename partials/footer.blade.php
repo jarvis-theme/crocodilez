@@ -61,7 +61,7 @@
 								</div>
 								<ul class="confirm">
 									<li>
-										<a href="{{URL::to('konfirmasiorder')}}">Konfirmasi Pembayaran</a>
+										<a href="{{URL::to('konfirmasiorder')}}">{{trans('content.step5.confirm_btn')}}</a>
 									</li>
 								</ul>
 							</div>
@@ -85,6 +85,9 @@
 								@endforeach
 								@if(count(list_dokus()) > 0 && list_dokus()->status == 1)
 									<img src="{{url('img/bank/doku.jpg')}}" alt="doku" title="Doku Myshortcart" />
+								@endif
+								@if(count(list_veritrans()) > 0 && list_veritrans()->status == 1 && list_veritrans()->type == 1)
+									<img src="{{url('img/bank/veritrans.png')}}" alt="Veritrans" title="Veritrans">
 								@endif
 							</div>
 						</div>
