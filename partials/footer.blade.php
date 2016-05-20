@@ -70,7 +70,9 @@
 
 							<div class="col-sm-2 col-md-2 col-lg-1 payment">
 								@foreach(list_banks() as $value)  
-								<img src="{{bank_logo($value)}}" alt="{{$value->bankdefault->nama}}" title="{{$value->bankdefault->nama}}" />
+                                    @if($value->status == 1)
+									<img src="{{bank_logo($value)}}" alt="{{$value->bankdefault->nama}}" title="{{$value->bankdefault->nama}}" />
+									@endif
 								@endforeach  
 								@foreach(list_payments() as $pay)
 									@if($pay->nama == 'paypal' && $pay->aktif == 1)
@@ -131,7 +133,7 @@
 								</a>
 								@endif
 							</div>
-					   </div>
+						</div>
 					</div>
 				</div>
 			</footer>
