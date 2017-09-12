@@ -73,7 +73,7 @@
 					</div>
 				</div>
 				<div class="form-group">
-					<div class="col-lg-offset-2 col-lg-10 col-xs-offset-1">
+					<div class="col-lg-offset-2 col-lg-10">
 						<div class="checkbox">
 							<input name="readme" value="1" type="checkbox" checked required> Saya telah membaca dan menyetujui <a href="{{url('service')}}" target="_blank" ><b>Syarat dan Ketentuan</b></a> yang ada di {{Theme::place('title')}}.
 						</div>

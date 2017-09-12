@@ -19,3 +19,4 @@
 	<meta property="og:image"         content="{{@$img!='' ? product_image_url($img):''}}" />
 	<title>{{$title}}</title>
 	<link rel="canonical" href="{{URL::full()}}">
+	{{ pluginHeader() }}

@@ -25,7 +25,7 @@
 										<div class="form-group">
 											<label class="col-sm-3 col-lg-3 control-label">Jumlah :</label>
 											<div class="col-sm-6">
-												<input type="number" class="form-control" name="qty" value="1">
+												<input type="number" class="form-control" name="qty" value="" pattern="[0-9]" min="0" required>
 											</div>
 										</div>
 									</div>

@@ -52,10 +52,6 @@
 											{{$kontak->email}}
 										</div>
 										<br>
-										@if(!empty($kontak->ym))
-										{{ymyahoo($kontak->ym)}}
-										<br>
-										@endif
 									</p>
 									<div class="clearfix"></div>
 								</div>
@@ -70,7 +66,7 @@
 
 							<div class="col-sm-2 col-md-2 col-lg-1 payment">
 								@foreach(list_banks() as $value)  
-                                    @if($value->status == 1)
+									@if($value->status == 1)
 									<img src="{{bank_logo($value)}}" alt="{{$value->bankdefault->nama}}" title="{{$value->bankdefault->nama}}" />
 									@endif
 								@endforeach  
@@ -89,7 +85,7 @@
 									<img src="{{url('img/bank/doku.jpg')}}" alt="doku" title="Doku Myshortcart" />
 								@endif
 								@if(count(list_veritrans()) > 0 && list_veritrans()->status == 1 && list_veritrans()->type == 1)
-									<img src="{{url('img/bank/veritrans.png')}}" alt="Veritrans" title="Veritrans">
+									<img class="midtrans" src="{{url('img/bank/midtrans.png')}}" alt="Midtrans" title="Midtrans">
 								@endif
 							</div>
 						</div>
@@ -130,6 +126,11 @@
 								@if(!empty($kontak->tl))
 								<a href="{{url($kontak->tl)}}">
 									<i class="fa fa-tumblr" title="Tumblr"></i>
+								</a>
+								@endif
+								@if(!empty($kontak->picmix))
+								<a href="{{url($kontak->picmix)}}" target="_blank">
+									<img class="picmix" src="//d3kamn3rg2loz7.cloudfront.net/blogs/event/icon-picmix.png">
 								</a>
 								@endif
 							</div>
